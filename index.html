@@ -46,7 +46,11 @@
                     serverDiv.innerHTML = `
                         <strong>Server:</strong> ${data.server}<br>
                         <strong>PHP Version:</strong> ${data.php_version}<br>
-                        <strong>Server Time:</strong> ${data.server_time}
+                        <strong>Server Time:</strong> ${data.server_time}<br>
+                        <strong>Server IP:</strong> ${data.server_ip}<br>
+                        <strong>Hostname:</strong> ${data.hostname}<br>
+                        <strong>Client IP:</strong> ${data.client_ip}<br>
+                        <strong>Server Port:</strong> ${data.server_port}
                     `;
                 })
                 .catch(error => {
