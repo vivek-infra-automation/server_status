@@ -44,13 +44,40 @@
                 .then(data => {
                     const serverDiv = document.getElementById('server-info');
                     serverDiv.innerHTML = `
-                        <strong>Server:</strong> ${data.server}<br>
-                        <strong>PHP Version:</strong> ${data.php_version}<br>
-                        <strong>Server Time:</strong> ${data.server_time}<br>
-                        <strong>Server IP:</strong> ${data.server_ip}<br>
-                        <strong>Hostname:</strong> ${data.hostname}<br>
-                        <strong>Client IP:</strong> ${data.client_ip}<br>
-                        <strong>Server Port:</strong> ${data.server_port}
+                        <div style="text-align: left;">
+                            <h3>Basic Info</h3>
+                            <strong>Server:</strong> ${data.server}<br>
+                            <strong>PHP Version:</strong> ${data.php_version}<br>
+                            <strong>Server Time:</strong> ${data.server_time}<br>
+                            <strong>OS:</strong> ${data.os}<br><br>
+                            
+                            <h3>Network</h3>
+                            <strong>Server IP:</strong> ${data.server_ip}<br>
+                            <strong>Hostname:</strong> ${data.hostname}<br>
+                            <strong>Client IP:</strong> ${data.client_ip}<br>
+                            <strong>Server Port:</strong> ${data.server_port}<br>
+                            <strong>HTTPS:</strong> ${data.https}<br>
+                            <strong>Protocol:</strong> ${data.server_protocol}<br><br>
+                            
+                            <h3>System Resources</h3>
+                            <strong>Memory Usage:</strong> ${data.memory_usage}<br>
+                            <strong>Memory Peak:</strong> ${data.memory_peak}<br>
+                            <strong>Disk Free:</strong> ${data.disk_free}<br>
+                            <strong>Disk Total:</strong> ${data.disk_total}<br>
+                            <strong>Load Average:</strong> ${data.load_average}<br><br>
+                            
+                            <h3>PHP Config</h3>
+                            <strong>Memory Limit:</strong> ${data.memory_limit}<br>
+                            <strong>Max Execution:</strong> ${data.max_execution_time}<br>
+                            <strong>Upload Max:</strong> ${data.upload_max_filesize}<br>
+                            <strong>Timezone:</strong> ${data.timezone}<br><br>
+                            
+                            <h3>Request Info</h3>
+                            <strong>Method:</strong> ${data.request_method}<br>
+                            <strong>URI:</strong> ${data.request_uri}<br>
+                            <strong>Document Root:</strong> ${data.document_root}<br>
+                            <strong>Server Name:</strong> ${data.server_name}<br>
+                        </div>
                     `;
                 })
                 .catch(error => {
